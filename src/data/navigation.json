@@ -1,0 +1,20 @@
+{
+  "main": [
+    { "label": "Home", "href": "/" },
+    { "label": "Research", "href": "/research" },
+    { "label": "Capabilities", "href": "/capabilities" },
+    { "label": "Methods", "href": "/methods" },
+    { "label": "Team", "href": "/team" },
+    { "label": "Publications", "href": "/publications" },
+    { "label": "Students", "href": "/students" },
+    { "label": "Contact", "href": "/contact" }
+  ],
+  "footer": [
+    { "label": "Research Themes", "href": "/research" },
+    { "label": "Capabilities", "href": "/capabilities" },
+    { "label": "Methods & Protocols", "href": "/methods" },
+    { "label": "Graduate Training", "href": "/students" },
+    { "label": "Publications", "href": "/publications" },
+    { "label": "Contact", "href": "/contact" }
+  ]
+}
