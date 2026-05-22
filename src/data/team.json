@@ -1,0 +1,68 @@
+[
+  {
+    "id": "elena-marquez",
+    "name": "Elena Marquez",
+    "role": "Principal Investigator",
+    "group": "PI",
+    "image": "/images/team/lab-group.svg",
+    "interests": ["Stress physiology", "Germplasm diversity", "Experimental design"],
+    "bio": "Elena develops integrative research programs that combine physiology, breeding, and analytical methods to improve inference across controlled and field environments.",
+    "email": "emarquez@colpos.mx",
+    "links": [
+      { "label": "ORCID", "href": "https://orcid.org/0000-0002-2211-4501" },
+      { "label": "Google Scholar", "href": "https://scholar.google.com/" }
+    ]
+  },
+  {
+    "id": "samir-haddad",
+    "name": "Samir Haddad",
+    "role": "Postdoctoral Research Associate",
+    "group": "Postdocs",
+    "image": "/images/team/lab-group.svg",
+    "interests": ["Salinity physiology", "Ion homeostasis", "Tomato systems"],
+    "bio": "Samir leads multi-season experiments on salt stress response and supports HPLC method harmonization across collaborative projects.",
+    "email": "shaddad@colpos.mx",
+    "links": [
+      { "label": "ResearchGate", "href": "https://www.researchgate.net/" }
+    ]
+  },
+  {
+    "id": "maria-okafor",
+    "name": "Maria Okafor",
+    "role": "PhD Candidate",
+    "group": "Graduate Students",
+    "image": "/images/team/lab-group.svg",
+    "interests": ["Phenotyping", "Canopy temperature", "Drought response"],
+    "bio": "Maria studies how imaging-derived traits can improve interpretation of drought progression in greenhouse and field crossover studies.",
+    "email": "mokafor@colpos.mx",
+    "links": [
+      { "label": "ORCID", "href": "https://orcid.org/0000-0003-1845-2290" }
+    ]
+  },
+  {
+    "id": "daniel-kim",
+    "name": "Daniel Kim",
+    "role": "MSc Student",
+    "group": "Graduate Students",
+    "image": "/images/team/lab-group.svg",
+    "interests": ["HPLC workflows", "Pigments", "Sample preparation"],
+    "bio": "Daniel develops reproducible pigment extraction protocols and maintains chromatographic QC records for student-led analytical projects.",
+    "email": "dkim@colpos.mx",
+    "links": [
+      { "label": "Google Scholar", "href": "https://scholar.google.com/" }
+    ]
+  },
+  {
+    "id": "lina-foster",
+    "name": "Lina Foster",
+    "role": "Research Technician",
+    "group": "Technicians",
+    "image": "/images/team/lab-group.svg",
+    "interests": ["Greenhouse operations", "SOP compliance", "Data stewardship"],
+    "bio": "Lina coordinates chamber schedules, sample tracking, and routine instrument calibration across the lab’s shared facilities.",
+    "email": "lfoster@colpos.mx",
+    "links": [
+      { "label": "Lab Manual", "href": "/students" }
+    ]
+  }
+]
