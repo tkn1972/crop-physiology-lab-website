@@ -1,0 +1,44 @@
+---
+import navigation from '../data/navigation.json';
+import site from '../data/site.json';
+import { isExternalHref, safeHref } from '../utils/safeHref';
+---
+
+<footer class="border-t border-line bg-[#f2efe9]">
+  <div class="page-shell grid gap-10 py-12 lg:grid-cols-[1.2fr_0.8fr_0.8fr]">
+    <div class="max-w-xl">
+      <p class="eyebrow mb-4">Colegio de Postgraduados</p>
+      <h2 class="text-2xl font-semibold">{site.labName}</h2>
+      <p class="mt-4">{site.mission}</p>
+    </div>
+
+    <div>
+        <h3 class="font-mono text-sm uppercase tracking-[0.22em] text-charcoal">Navigate</h3>
+      <ul class="mt-4 space-y-3">
+        {navigation.footer.map((item) => (
+          <li>
+            <a
+              class="text-muted transition hover:text-pine"
+              href={safeHref(item.href)}
+              target={isExternalHref(item.href) ? '_blank' : undefined}
+              rel={isExternalHref(item.href) ? 'noreferrer' : undefined}
+            >
+              {item.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="font-mono text-sm uppercase tracking-[0.22em] text-charcoal">Contact</h3>
+      <ul class="mt-4 space-y-3 text-muted">
+        <li>{site.institution}</li>
+        <li>{site.location}</li>
+        <li>
+          <a href={`mailto:${site.email}`} class="transition hover:text-pine">{site.email}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
