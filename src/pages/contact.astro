@@ -1,0 +1,103 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import site from '../data/site.json';
+import { safeHref } from '../utils/safeHref';
+---
+
+<BaseLayout
+  title={`${site.labName} | Contact`}
+  description="Contact the Crop Physiology Lab at COLPOS for collaboration inquiries, student opportunities, and institutional connections."
+>
+  <PageHero
+    eyebrow="Contact"
+    title="Collaboration, student inquiries, and institutional contact"
+    description="We welcome messages from prospective graduate students, faculty collaborators, and research groups interested in plant physiology, phenotyping, and reproducible analytical workflows."
+  >
+    <div class="space-y-4">
+      <p class="font-mono text-xs uppercase tracking-[0.22em] text-muted">Response Time</p>
+      <p>{site.responseTime}</p>
+      <p class="font-mono text-xs uppercase tracking-[0.22em] text-muted">Primary Email</p>
+      <a href={`mailto:${site.email}`} class="text-lg font-semibold text-pine transition hover:text-charcoal">
+        {site.email}
+      </a>
+    </div>
+  </PageHero>
+
+  <section class="section-space">
+    <div class="page-shell grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
+      <div class="space-y-8">
+        <div class="max-w-3xl">
+          <p class="eyebrow mb-3">Contact Details</p>
+          <h2 class="text-3xl font-semibold leading-tight sm:text-4xl">Institution and principal investigator</h2>
+          <p class="mt-4">
+            For the fastest reply, include a concise project summary, timeline, and any relevant methods background.
+          </p>
+        </div>
+
+        <div class="surface-card p-8">
+          <h3 class="text-2xl font-semibold">{site.contact.piName}</h3>
+          <p class="mt-2 text-charcoal">{site.contact.piTitle}</p>
+          <div class="mt-6 space-y-3 text-muted">
+            <p>{site.institution}</p>
+            <p>{site.contact.office}</p>
+            <p>{site.location}</p>
+            <a href={`mailto:${site.email}`} class="inline-flex text-pine transition hover:text-charcoal">
+              {site.email}
+            </a>
+          </div>
+        </div>
+
+        <div class="surface-card p-8">
+          <h3 class="text-xl font-semibold">Related programs</h3>
+          <ul class="mt-5 space-y-3">
+            {site.contact.departmentLinks.map((item) => (
+              <li>
+                <a href={safeHref(item.href)} class="text-muted transition hover:text-pine" target="_blank" rel="noreferrer">
+                  {item.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+      <div class="surface-card p-8 sm:p-10">
+        <h2 class="text-3xl font-semibold">Inquiry Form</h2>
+        <p class="mt-4">
+          This interface is frontend-only, but it reflects the complete structure we use for collaboration and student inquiries.
+        </p>
+        <form class="mt-8 space-y-5">
+          <div class="grid gap-5 sm:grid-cols-2">
+            <label class="block">
+              <span class="mb-2 block text-sm font-semibold text-charcoal">Name</span>
+              <input type="text" class="w-full rounded-2xl border border-line bg-white px-4 py-3" />
+            </label>
+            <label class="block">
+              <span class="mb-2 block text-sm font-semibold text-charcoal">Email</span>
+              <input type="email" class="w-full rounded-2xl border border-line bg-white px-4 py-3" />
+            </label>
+          </div>
+          <label class="block">
+            <span class="mb-2 block text-sm font-semibold text-charcoal">Inquiry Type</span>
+            <select class="w-full rounded-2xl border border-line bg-white px-4 py-3">
+              <option>Prospective graduate student</option>
+              <option>Research collaboration</option>
+              <option>Methods or resource request</option>
+              <option>Seminar or teaching invitation</option>
+            </select>
+          </label>
+          <label class="block">
+            <span class="mb-2 block text-sm font-semibold text-charcoal">Subject</span>
+            <input type="text" class="w-full rounded-2xl border border-line bg-white px-4 py-3" />
+          </label>
+          <label class="block">
+            <span class="mb-2 block text-sm font-semibold text-charcoal">Message</span>
+            <textarea rows="7" class="w-full rounded-2xl border border-line bg-white px-4 py-3"></textarea>
+          </label>
+          <button type="submit" class="button-primary">Send Inquiry</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

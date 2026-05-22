@@ -1,0 +1,62 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import TeamCard from '../components/TeamCard.astro';
+import team from '../data/team.json';
+import site from '../data/site.json';
+
+const principalInvestigator = team.find((member) => member.group === 'PI');
+const groupedMembers = ['Postdocs', 'Graduate Students', 'Technicians'].map((group) => ({
+  group,
+  members: team.filter((member) => member.group === group),
+}));
+---
+
+<BaseLayout
+  title={`${site.labName} | Team`}
+  description="Meet the principal investigator, postdoctoral scholars, graduate students, and research staff in the Crop Physiology Lab at COLPOS."
+>
+  <PageHero
+    eyebrow="Team"
+    title="People, training, and shared scientific practice"
+    description="Our research group combines physiology, breeding, analytical chemistry, and data stewardship expertise across faculty, postdoctoral, student, and technical roles."
+  >
+    <img
+      src="/images/team/lab-group.svg"
+      alt="Illustrated plant physiology lab group"
+      class="w-full rounded-[1.25rem] border border-line"
+    />
+  </PageHero>
+
+  <section class="section-space">
+    <div class="page-shell">
+      <div class="max-w-3xl">
+        <p class="eyebrow mb-3">Principal Investigator</p>
+        <h2 class="text-3xl font-semibold leading-tight sm:text-4xl">Research leadership</h2>
+        <p class="mt-4">
+          The lab is organized around collaborative project development, careful student training, and methodologically transparent experimentation.
+        </p>
+      </div>
+      <div class="mt-10">
+        {principalInvestigator ? <TeamCard member={principalInvestigator} featured /> : null}
+      </div>
+    </div>
+  </section>
+
+  <section class="section-space border-t border-line/80 bg-[#fbfaf8]">
+    <div class="page-shell space-y-12">
+      {groupedMembers.map(({ group, members }) => (
+        <div>
+          <div class="max-w-3xl">
+            <p class="eyebrow mb-3">{group}</p>
+            <h2 class="text-3xl font-semibold leading-tight sm:text-4xl">{group}</h2>
+            <p class="mt-4">Current {group.toLowerCase()} contributing to experiments, analysis, and laboratory operations.</p>
+          </div>
+          <div class="mt-8 grid gap-6 lg:grid-cols-2">
+            {members.map((member) => <TeamCard member={member} />)}
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+</BaseLayout>
