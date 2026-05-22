@@ -1,0 +1,57 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import CTASection from '../components/CTASection.astro';
+import site from '../data/site.json';
+---
+
+<BaseLayout
+  title={`${site.labName} | Methods & Protocols`}
+  description="Standard operating procedures, analytical protocols, and documented lab workflows from the Crop Physiology Lab."
+>
+  <PageHero
+    eyebrow="Methods & Protocols"
+    title="Standard operating procedures and documented workflows"
+    description="Searchable protocols for analytical chemistry, experimental design, phenotyping, and data management. Detailed procedures will be added in the next phase."
+  >
+    <div class="space-y-4">
+      <p class="font-mono text-xs uppercase tracking-[0.22em] text-muted">Status</p>
+      <p>Protocol documentation is being migrated from the previous resources library.</p>
+    </div>
+  </PageHero>
+
+  <section class="section-space">
+    <div class="page-shell">
+      <div class="max-w-3xl">
+        <p class="eyebrow mb-3">Coming Soon</p>
+        <h2 class="text-3xl font-semibold leading-tight sm:text-4xl">Protocol documentation under development</h2>
+        <p class="mt-4">
+          This page will host searchable protocols with category filtering and search.
+          Content will be editable via Markdown files in src/content/protocols/.
+        </p>
+      </div>
+      <div class="mt-10 grid gap-6 md:grid-cols-2">
+        <article class="surface-card p-6">
+          <p class="eyebrow mb-3">Analytical</p>
+          <h3 class="text-xl font-semibold">HPLC metabolite profiling</h3>
+          <p class="mt-4">Sample preparation, extraction, chromatographic conditions, and data processing for targeted metabolite analysis.</p>
+        </article>
+        <article class="surface-card p-6">
+          <p class="eyebrow mb-3">Experimental</p>
+          <h3 class="text-xl font-semibold">Growth chamber experimental design</h3>
+          <p class="mt-4">Standard layouts, replication strategies, randomization, and environmental control protocols.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <CTASection
+    eyebrow="Resources"
+    title="Looking for a specific protocol?"
+    description="Contact us if you need a protocol that is not yet listed. We are actively documenting and standardizing our core procedures."
+    actions={[
+      { label: 'Contact the Lab', href: '/contact', variant: 'primary' },
+      { label: 'View Capabilities', href: '/capabilities', variant: 'secondary' },
+    ]}
+  />
+</BaseLayout>
