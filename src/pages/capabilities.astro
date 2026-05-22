@@ -1,0 +1,57 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import CTASection from '../components/CTASection.astro';
+import site from '../data/site.json';
+---
+
+<BaseLayout
+  title={`${site.labName} | Capabilities`}
+  description="Lab equipment, analytical services, and collaboration opportunities at the Crop Physiology Lab."
+>
+  <PageHero
+    eyebrow="Capabilities"
+    title="Equipment and analytical services"
+    description="An overview of the instrumentation, experimental platforms, and analytical workflows available for collaboration. Detailed capability profiles will be added in the next phase."
+  >
+    <div class="space-y-4">
+      <p class="font-mono text-xs uppercase tracking-[0.22em] text-muted">Status</p>
+      <p>Detailed equipment specifications and service descriptions are coming soon.</p>
+    </div>
+  </PageHero>
+
+  <section class="section-space">
+    <div class="page-shell">
+      <div class="max-w-3xl">
+        <p class="eyebrow mb-3">Coming Soon</p>
+        <h2 class="text-3xl font-semibold leading-tight sm:text-4xl">Capability profiles under development</h2>
+        <p class="mt-4">
+          This page will list equipment, sample requirements, and collaboration pathways.
+          Content will be editable via Markdown files in <code class="bg-soft px-2 py-1 rounded">src/content/capabilities/</code>.
+        </p>
+      </div>
+      <div class="mt-10 grid gap-6 md:grid-cols-2">
+        <article class="surface-card p-6">
+          <p class="eyebrow mb-3">Analytical</p>
+          <h3 class="text-xl font-semibold">Chromatography and metabolite analysis</h3>
+          <p class="mt-4">Protocols for HPLC-based metabolite profiling and small molecule quantification.</p>
+        </article>
+        <article class="surface-card p-6">
+          <p class="eyebrow mb-3">Phenotyping</p>
+          <h3 class="text-xl font-semibold">Controlled-environment phenotyping</h3>
+          <p class="mt-4">Growth chamber and greenhouse-based trait measurement under controlled conditions.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <CTASection
+    eyebrow="Collaboration"
+    title="Interested in using lab equipment or services?"
+    description="We welcome collaborations with researchers at COLPOS and beyond. Contact us to discuss your project needs."
+    actions={[
+      { label: 'Contact the Lab', href: '/contact', variant: 'primary' },
+      { label: 'View Research', href: '/research', variant: 'secondary' },
+    ]}
+  />
+</BaseLayout>
