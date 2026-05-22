@@ -1,0 +1,46 @@
+{
+  "labName": "Crop Physiology Lab",
+  "tagline": "Advancing plant physiology through rigorous experimentation, analytical precision, and reproducible research.",
+  "mission": "We investigate how crop and model plant systems respond to environmental variability by integrating controlled-environment experiments, quantitative phenotyping, analytical chemistry, and careful statistical design.",
+  "piBio": "Professor Elena Marquez leads the lab with a research program spanning stress physiology, germplasm diversity, and measurement-centered experimental workflows for translational crop science.",
+  "institution": "Colegio de Postgraduados (COLPOS), Montecillo, Mexico",
+  "email": "cropphysiology@colpos.mx",
+  "location": "Colegio de Postgraduados, Montecillo, Texcoco, Estado de México, Mexico",
+  "responseTime": "We typically respond to academic and collaboration inquiries within 3 to 5 business days.",
+  "hero": {
+    "eyebrow": "COLPOS Research Group",
+    "description": "The Crop Physiology Lab studies plant performance across water limitation, salinity, and managed growth environments, with a focus on credible inference, transparent methods, and graduate training.",
+    "ctas": [
+      {
+        "label": "Explore Research",
+        "href": "/research",
+        "variant": "primary"
+      },
+      {
+        "label": "Meet the Team",
+        "href": "/team",
+        "variant": "secondary"
+      },
+      {
+        "label": "Join as a Student",
+        "href": "/students",
+        "variant": "tertiary"
+      }
+    ]
+  },
+  "contact": {
+    "piName": "Prof. Elena Marquez",
+    "piTitle": "Principal Investigator",
+    "office": "Davis Hall 4.214",
+    "departmentLinks": [
+      {
+        "label": "Department of Plant Biology",
+        "href": "https://www.colpos.mx/"
+      },
+      {
+        "label": "Graduate Program in Crop Science",
+        "href": "https://www.colpos.mx/"
+      }
+    ]
+  }
+}
