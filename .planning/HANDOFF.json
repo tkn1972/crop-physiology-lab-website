@@ -1,0 +1,53 @@
+{
+  "version": "1.0",
+  "timestamp": "2026-05-22T23:31:31.810Z",
+  "phase": "1",
+  "phase_name": "Foundation",
+  "phase_dir": ".planning/phases/01-foundation",
+  "plan": null,
+  "task": null,
+  "total_tasks": 0,
+  "status": "paused",
+  "completed_tasks": [
+    {
+      "id": 1,
+      "name": "Phase 1 context gathering (01-CONTEXT.md)",
+      "status": "done",
+      "commit": "197f65d"
+    },
+    {
+      "id": 2,
+      "name": "Discussion log (01-DISCUSSION-LOG.md)",
+      "status": "done",
+      "commit": "197f65d"
+    }
+  ],
+  "remaining_tasks": [
+    {
+      "id": 3,
+      "name": "Phase 1 research (technical investigation)",
+      "status": "not_started"
+    },
+    {
+      "id": 4,
+      "name": "Phase 1 planning (PLAN.md creation)",
+      "status": "not_started"
+    },
+    {
+      "id": 5,
+      "name": "Phase 1 execution (implement design system, rebrand, shared components, content infrastructure)",
+      "status": "not_started"
+    },
+    {
+      "id": 6,
+      "name": "Phase 1 verification (build + manual testing)",
+      "status": "not_started"
+    }
+  ],
+  "blockers": [],
+  "human_actions_pending": [],
+  "decisions": [],
+  "uncommitted_files": [],
+  "next_action": "Run /gsd:plan-phase 1 to create PLAN.md from the gathered context",
+  "context_notes": "Phase 1 context has been captured. The project has a solid existing Astro 5 + Tailwind CSS codebase with 7 pages, a good design system, and placeholder data. The rebrand to 'Crop Physiology Lab' with COLPOS affiliation is the primary change. Content portability is sacred."
+}
