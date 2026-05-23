@@ -19,7 +19,7 @@ interface Member {
 const { member, featured = false } = Astro.props as { member: Member; featured?: boolean };
 ---
 
-<article class:list={['surface-card overflow-hidden', featured && 'lg:grid lg:grid-cols-[0.85fr_1.15fr]']}>
+<article class:list={['border-b border-line pb-8 mb-8', featured && 'lg:grid lg:grid-cols-[0.85fr_1.15fr]']}>
   <div class:list={['overflow-hidden', featured ? 'min-h-full' : 'h-52']}>
     <img
       src={member.image}
