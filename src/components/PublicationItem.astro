@@ -38,7 +38,7 @@ const { publication, featured = false } = Astro.props as {
           </span>
         ))}
         {publication.link ? (
-          <a href={safeHref(publication.link)} target="_blank" rel="noreferrer" class="text-sm font-semibold text-pine transition hover:text-charcoal">
+          <a href={safeHref(publication.link)} target="_blank" rel="noreferrer" class="text-sm font-semibold text-pine transition hover:text-forest">
             View DOI
           </a>
         ) : null}

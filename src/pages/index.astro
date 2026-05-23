@@ -84,7 +84,7 @@ const featuredPublications = [...publications].sort((a, b) => b.year - a.year).s
             <p class="eyebrow mb-3">Theme</p>
             <h3 class="text-2xl font-semibold">{area.title}</h3>
             <p class="mt-4 flex-1">{area.summary}</p>
-            <a href="/research" class="mt-6 text-sm font-semibold text-pine transition hover:text-charcoal">
+            <a href="/research" class="mt-6 text-sm font-semibold text-pine transition hover:text-forest">
               View research area
             </a>
           </article>
@@ -106,7 +106,7 @@ const featuredPublications = [...publications].sort((a, b) => b.year - a.year).s
         <div class="mt-8 border-t border-line">
           {featuredPublications.map((publication) => <PublicationItem publication={publication} />)}
         </div>
-        <a href="/publications" class="mt-6 inline-flex text-sm font-semibold text-pine transition hover:text-charcoal">
+        <a href="/publications" class="mt-6 inline-flex text-sm font-semibold text-pine transition hover:text-forest">
           Browse all publications
         </a>
       </div>
@@ -128,7 +128,7 @@ const featuredPublications = [...publications].sort((a, b) => b.year - a.year).s
             </div>
           ))}
         </div>
-        <a href="/resources" class="mt-6 inline-flex text-sm font-semibold text-pine transition hover:text-charcoal">
+        <a href="/resources" class="mt-6 inline-flex text-sm font-semibold text-pine transition hover:text-forest">
           Explore lab resources
         </a>
       </div>
