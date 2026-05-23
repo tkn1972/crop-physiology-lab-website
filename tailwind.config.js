@@ -4,19 +4,21 @@ export default {
   theme: {
     extend: {
       colors: {
-        parchment: '#f8f7f5',
+        parchment: '#faf9f6',
+        cream: '#f5f2ec',
         surface: '#ffffff',
         ink: '#1f2328',
         muted: '#5b6257',
         line: '#d9d6cf',
         pine: '#4a7c59',
-        sage: '#6b8e6f',
+        sage: '#7da882',
+        moss: '#d4e4c8',
         earth: '#b35844',
         soft: '#ece7df',
-        charcoal: '#2b2d31',
+        forest: '#1a3c27',
       },
       fontFamily: {
-        serif: ['"Playfair Display"', 'Georgia', 'serif'],
+        serif: ['"DM Sans"', 'system-ui', 'sans-serif'],
         sans: ['"Source Sans 3"', 'system-ui', 'sans-serif'],
         mono: ['"IBM Plex Mono"', 'ui-monospace', 'monospace'],
       },
