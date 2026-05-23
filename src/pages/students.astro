@@ -23,14 +23,14 @@ import students from '../data/students.json';
 
   <section class="section-space">
     <div class="page-shell grid gap-10 lg:grid-cols-2">
-      <div class="surface-card p-8">
+      <div class="bg-surface p-8">
         <div class="max-w-3xl">
           <p class="eyebrow mb-3">Onboarding</p>
           <h2 class="text-3xl font-semibold leading-tight sm:text-4xl">{students.onboarding.title}</h2>
           <p class="mt-4">{students.onboarding.body}</p>
         </div>
       </div>
-      <div class="surface-card p-8">
+      <div class="bg-surface p-8">
         <p class="eyebrow mb-4">Lab Expectations</p>
         <ul class="space-y-4 text-muted">
           {students.expectations.map((item) => <li>{item}</li>)}
@@ -39,21 +39,21 @@ import students from '../data/students.json';
     </div>
   </section>
 
-  <section class="section-space border-y border-line/80 bg-[#fbfaf8]">
+  <section class="section-space border-y border-line/80 bg-cream">
     <div class="page-shell grid gap-8 lg:grid-cols-3">
-      <div class="surface-card p-8">
+      <div class="bg-surface p-8">
         <p class="eyebrow mb-4">Data Management</p>
         <ul class="space-y-4 text-muted">
           {students.dataManagement.map((item) => <li>{item}</li>)}
         </ul>
       </div>
-      <div class="surface-card p-8">
+      <div class="bg-surface p-8">
         <p class="eyebrow mb-4">Reproducibility</p>
         <ul class="space-y-4 text-muted">
           {students.reproducibility.map((item) => <li>{item}</li>)}
         </ul>
       </div>
-      <div class="surface-card p-8">
+      <div class="bg-surface p-8">
         <p class="eyebrow mb-4">Recommended Software</p>
         <ul class="space-y-4 text-muted">
           {students.software.map((item) => <li>{item}</li>)}
@@ -73,7 +73,7 @@ import students from '../data/students.json';
       </div>
       <div class="mt-10 grid gap-6 lg:grid-cols-2">
         {students.faq.map((item) => (
-          <article class="surface-card p-8">
+          <article class="p-8">
             <h3 class="text-2xl font-semibold">{item.question}</h3>
             <p class="mt-4">{item.answer}</p>
           </article>
