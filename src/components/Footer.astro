@@ -4,7 +4,7 @@ import site from '../data/site.json';
 import { isExternalHref, safeHref } from '../utils/safeHref';
 ---
 
-<footer class="border-t border-line bg-[#f2efe9]">
+<footer class="border-t border-line bg-cream">
   <div class="page-shell grid gap-10 py-12 lg:grid-cols-[1.2fr_0.8fr_0.8fr]">
     <div class="max-w-xl">
       <p class="eyebrow mb-4">Colegio de Postgraduados</p>
@@ -13,7 +13,7 @@ import { isExternalHref, safeHref } from '../utils/safeHref';
     </div>
 
     <div>
-        <h3 class="font-mono text-sm uppercase tracking-[0.22em] text-charcoal">Navigate</h3>
+        <h3 class="font-mono text-sm uppercase tracking-[0.22em] text-forest">Navigate</h3>
       <ul class="mt-4 space-y-3">
         {navigation.footer.map((item) => (
           <li>
@@ -31,7 +31,7 @@ import { isExternalHref, safeHref } from '../utils/safeHref';
     </div>
 
     <div>
-      <h3 class="font-mono text-sm uppercase tracking-[0.22em] text-charcoal">Contact</h3>
+      <h3 class="font-mono text-sm uppercase tracking-[0.22em] text-forest">Contact</h3>
       <ul class="mt-4 space-y-3 text-muted">
         <li>{site.institution}</li>
         <li>{site.location}</li>
