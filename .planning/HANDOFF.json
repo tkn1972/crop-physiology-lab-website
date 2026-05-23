@@ -1,53 +1,83 @@
 {
   "version": "1.0",
-  "timestamp": "2026-05-22T23:31:31.810Z",
-  "phase": "1",
-  "phase_name": "Foundation",
-  "phase_dir": ".planning/phases/01-foundation",
+  "timestamp": "2026-05-23T01:00:24Z",
+  "phase": "2",
+  "phase_name": "Core Content Pages",
+  "phase_dir": ".planning/phases/02-core-content",
   "plan": null,
   "task": null,
-  "total_tasks": 0,
+  "total_tasks": null,
   "status": "paused",
   "completed_tasks": [
     {
       "id": 1,
-      "name": "Phase 1 context gathering (01-CONTEXT.md)",
+      "name": "Discuss phase context",
       "status": "done",
-      "commit": "197f65d"
+      "commit": null
     },
     {
       "id": 2,
-      "name": "Discussion log (01-DISCUSSION-LOG.md)",
+      "name": "Write 02-CONTEXT.md",
       "status": "done",
-      "commit": "197f65d"
+      "commit": null
     }
   ],
   "remaining_tasks": [
     {
       "id": 3,
-      "name": "Phase 1 research (technical investigation)",
+      "name": "Write 02-DISCUSSION-LOG.md",
       "status": "not_started"
     },
     {
       "id": 4,
-      "name": "Phase 1 planning (PLAN.md creation)",
+      "name": "Create PLAN.md for Phase 2",
       "status": "not_started"
     },
     {
       "id": 5,
-      "name": "Phase 1 execution (implement design system, rebrand, shared components, content infrastructure)",
-      "status": "not_started"
-    },
-    {
-      "id": 6,
-      "name": "Phase 1 verification (build + manual testing)",
+      "name": "Execute Phase 2 plans",
       "status": "not_started"
     }
   ],
   "blockers": [],
   "human_actions_pending": [],
-  "decisions": [],
-  "uncommitted_files": [],
-  "next_action": "Run /gsd:plan-phase 1 to create PLAN.md from the gathered context",
-  "context_notes": "Phase 1 context has been captured. The project has a solid existing Astro 5 + Tailwind CSS codebase with 7 pages, a good design system, and placeholder data. The rebrand to 'Crop Physiology Lab' with COLPOS affiliation is the primary change. Content portability is sacred."
+  "decisions": [
+    {
+      "decision": "Team content: Migrate entirely to Markdown with YAML frontmatter in src/content/team/",
+      "rationale": "Maximum portability. team.json deprecated.",
+      "phase": "2"
+    },
+    {
+      "decision": "Research content: Migrate 5 themes to Markdown in src/content/research/", 
+      "rationale": "Satisfies RES-03. JSON deprecated.",
+      "phase": "2"
+    },
+    {
+      "decision": "Publications: Stay in src/data/publications.json (add id fields)",
+      "rationale": "Already optimal tabular format. No migration needed.",
+      "phase": "2"
+    },
+    {
+      "decision": "Cross-linking: Add explicit publicationIds array in research frontmatter, matched against new id field in publications.json",
+      "rationale": "Most robust linking mechanism. DOI lookup by slug.",
+      "phase": "2"
+    },
+    {
+      "decision": "Team photos: Use representative stock/AI portraits per member",
+      "rationale": "Replaces SVG placeholders with realistic visuals.",
+      "phase": "2"
+    },
+    {
+      "decision": "Publication filters: Keep existing granular tag taxonomy",
+      "rationale": "Already accurate. No reorganization needed.",
+      "phase": "2"
+    }
+  ],
+  "uncommitted_files": [
+    ".planning/phases/02-core-content/02-CONTEXT.md",
+    ".planning/phases/02-core-content/.continue-here.md",
+    ".planning/HANDOFF.json"
+  ],
+  "next_action": "Write 02-DISCUSSION-LOG.md documenting the 4 discussed gray areas and their resolutions, then commit context files together.",
+  "context_notes": "Phase 2 context discussion is complete. All 4 gray areas resolved: content migration (full Markdown for team+research, JSON stays for publications), cross-linking (slug IDs), photos (stock/AI), filters (keep current tags). Next is creating the plan and executing."
 }
