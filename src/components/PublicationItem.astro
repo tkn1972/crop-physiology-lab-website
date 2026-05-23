@@ -24,16 +24,16 @@ const { publication, featured = false } = Astro.props as {
   <div class="grid gap-4 md:grid-cols-[6rem_1fr] md:gap-8">
     <div class="font-mono text-sm uppercase tracking-[0.22em] text-pine">{publication.year}</div>
     <div>
-      <h3 class:list={['font-serif font-semibold', featured ? 'text-3xl' : 'text-2xl']}>
+      <h3 class:list={['font-semibold', featured ? 'text-3xl' : 'text-2xl']}>
         {publication.title}
       </h3>
-      <p class="mt-3 text-ink">{publication.authors}</p>
+      <p class="mt-3 text-muted">{publication.authors}</p>
       <p class="mt-2">
-        <span class="font-semibold text-charcoal">{publication.journal}</span>
+        <span class="font-semibold text-forest">{publication.journal}</span>
       </p>
       <div class="mt-4 flex flex-wrap items-center gap-3">
         {publication.tags?.map((tag) => (
-          <span class="rounded-full bg-soft px-3 py-1 font-mono text-xs uppercase tracking-[0.16em] text-charcoal">
+          <span class="rounded-full bg-soft px-3 py-1 font-mono text-xs uppercase tracking-[0.16em] text-forest">
             {tag}
           </span>
         ))}

@@ -19,7 +19,7 @@ const statusTone = {
 ---
 
 <article
-  class="resource-card surface-card flex h-full flex-col p-6"
+  class="resource-card flex h-full flex-col bg-surface p-6"
   data-category={resource.category}
 >
   <div class="flex items-start justify-between gap-4">
@@ -30,7 +30,7 @@ const statusTone = {
     <span
       class:list={[
         'rounded-full px-3 py-1 font-mono text-xs uppercase tracking-[0.16em]',
-        statusTone[resource.status as keyof typeof statusTone] || 'bg-soft text-charcoal',
+        statusTone[resource.status as keyof typeof statusTone] || 'bg-soft text-forest',
       ]}
     >
       {resource.status}
