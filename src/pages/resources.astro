@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import ResourceLibrary from '../components/ResourceLibrary.astro';
+import site from '../data/site.json';
+---
+
+<BaseLayout
+  title={`${site.labName} | Resources`}
+  description="Searchable academic resources including analytical methods, experimental design guides, SOPs, and student materials."
+>
+  <PageHero
+    eyebrow="Resources"
+    title="Protocols, templates, and reference materials"
+    description="This page functions as a working library for methods, planning documents, and onboarding materials used across the lab."
+  >
+    <div class="space-y-4">
+      <p class="font-mono text-xs uppercase tracking-[0.22em] text-muted">Library Coverage</p>
+      <ul class="space-y-3 text-muted">
+        <li>Analytical methods and laboratory SOPs</li>
+        <li>Experimental design and statistical reporting templates</li>
+        <li>Student-facing documents for onboarding and data stewardship</li>
+      </ul>
+    </div>
+  </PageHero>
+
+  <ResourceLibrary />
+</BaseLayout>

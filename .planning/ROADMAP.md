@@ -36,6 +36,14 @@
 - ID-03: Header with lab name, COLPOS affiliation, active page highlighting
 - ID-04: Footer with nav links, contact info, affiliation, copyright
 
+**Plans:** 4 plans
+
+**Plan list:**
+- [ ] `01-01-PLAN.md` — Rebrand data and navigation (update site.json, navigation.json, page meta descriptions)
+- [ ] `01-02-PLAN.md` — Shared components update (Header, Footer, BaseLayout font loading)
+- [ ] `01-03-PLAN.md` — Content infrastructure and placeholder pages (src/content/ dirs, Capabilities, Methods stubs)
+- [ ] `01-04-PLAN.md` — Build verification, responsive testing, and update workflow documentation
+
 **Success Criteria:**
 1. Site builds without errors (`npm run build` succeeds)
 2. All shared components (Header, Footer, PageHero, CTASection) render correctly

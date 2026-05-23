@@ -1,0 +1,33 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import PublicationsArchive from '../components/PublicationsArchive.astro';
+import publications from '../data/publications.json';
+import site from '../data/site.json';
+
+const sortedPublications = [...publications].sort((left, right) => right.year - left.year);
+const featuredPublication =
+  sortedPublications.find((publication) => publication.tags?.includes('Featured')) ||
+  sortedPublications[0];
+---
+
+<BaseLayout
+  title={`${site.labName} | Publications`}
+  description="Academic publications from the lab across breeding, stress physiology, controlled-environment phenotyping, analytical chemistry, and reproducibility."
+>
+  <PageHero
+    eyebrow="Publications"
+    title="Peer-reviewed outputs and reporting standards"
+    description="Our publication list emphasizes papers where physiological interpretation is supported by careful methods, transparent analysis, and clearly stated experimental assumptions."
+  >
+    <div class="space-y-4">
+      <p class="font-mono text-xs uppercase tracking-[0.22em] text-muted">Featured Item</p>
+      <h2 class="text-2xl font-semibold leading-tight">{featuredPublication.title}</h2>
+      <p class="text-sm uppercase tracking-[0.16em] text-muted">
+        {featuredPublication.journal} • {featuredPublication.year}
+      </p>
+    </div>
+  </PageHero>
+
+  <PublicationsArchive />
+</BaseLayout>

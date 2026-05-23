@@ -1,0 +1,39 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import ResearchCard from '../components/ResearchCard.astro';
+import research from '../data/research.json';
+import site from '../data/site.json';
+---
+
+<BaseLayout
+  title={`${site.labName} | Research`}
+  description="Research areas in plant genetics, stress physiology, controlled-environment phenotyping, HPLC workflows, and experimental design."
+>
+  <PageHero
+    eyebrow="Research"
+    title="Scientific themes and experimental priorities"
+    description="The lab combines controlled-environment experiments, quantitative measurements, and design-aware analysis to address applied and mechanistic questions in plant physiology."
+  >
+    <img
+      src="/images/research/phenotyping.svg"
+      alt="Illustrated research dashboard for plant phenotyping"
+      class="w-full rounded-[1.25rem] border border-line"
+    />
+  </PageHero>
+
+  <section class="section-space">
+    <div class="page-shell">
+      <div class="max-w-3xl">
+        <p class="eyebrow mb-3">Program Areas</p>
+        <h2 class="text-3xl font-semibold leading-tight sm:text-4xl">Information-rich project themes</h2>
+        <p class="mt-4">
+          Each area below reflects an active part of the lab’s research program, including methods, tools, expected outputs, and associated publication directions.
+        </p>
+      </div>
+      <div class="mt-10 space-y-6">
+        {research.map((area) => <ResearchCard area={area} />)}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

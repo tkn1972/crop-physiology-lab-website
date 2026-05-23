@@ -1,0 +1,94 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTASection from '../components/CTASection.astro';
+import PageHero from '../components/PageHero.astro';
+import site from '../data/site.json';
+import students from '../data/students.json';
+---
+
+<BaseLayout
+  title={`${site.labName} | Students`}
+  description="Student onboarding, lab expectations, reproducibility guidance, software recommendations, and FAQ for joining the lab."
+>
+  <PageHero
+    eyebrow="Students"
+    title="Graduate training, onboarding, and lab culture"
+    description="This page outlines how we introduce new trainees to our research environment, document expectations, and maintain reproducible scientific practice across projects."
+  >
+    <div class="space-y-4">
+      <p class="font-mono text-xs uppercase tracking-[0.22em] text-muted">First-Month Focus</p>
+      <p>{students.onboarding.body}</p>
+    </div>
+  </PageHero>
+
+  <section class="section-space">
+    <div class="page-shell grid gap-10 lg:grid-cols-2">
+      <div class="surface-card p-8">
+        <div class="max-w-3xl">
+          <p class="eyebrow mb-3">Onboarding</p>
+          <h2 class="text-3xl font-semibold leading-tight sm:text-4xl">{students.onboarding.title}</h2>
+          <p class="mt-4">{students.onboarding.body}</p>
+        </div>
+      </div>
+      <div class="surface-card p-8">
+        <p class="eyebrow mb-4">Lab Expectations</p>
+        <ul class="space-y-4 text-muted">
+          {students.expectations.map((item) => <li>{item}</li>)}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-space border-y border-line/80 bg-[#fbfaf8]">
+    <div class="page-shell grid gap-8 lg:grid-cols-3">
+      <div class="surface-card p-8">
+        <p class="eyebrow mb-4">Data Management</p>
+        <ul class="space-y-4 text-muted">
+          {students.dataManagement.map((item) => <li>{item}</li>)}
+        </ul>
+      </div>
+      <div class="surface-card p-8">
+        <p class="eyebrow mb-4">Reproducibility</p>
+        <ul class="space-y-4 text-muted">
+          {students.reproducibility.map((item) => <li>{item}</li>)}
+        </ul>
+      </div>
+      <div class="surface-card p-8">
+        <p class="eyebrow mb-4">Recommended Software</p>
+        <ul class="space-y-4 text-muted">
+          {students.software.map((item) => <li>{item}</li>)}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-space">
+    <div class="page-shell">
+      <div class="max-w-3xl">
+        <p class="eyebrow mb-3">FAQ</p>
+        <h2 class="text-3xl font-semibold leading-tight sm:text-4xl">Questions we receive from prospective students</h2>
+        <p class="mt-4">
+          These answers reflect the lab’s current approach to recruitment, methods training, and project development.
+        </p>
+      </div>
+      <div class="mt-10 grid gap-6 lg:grid-cols-2">
+        {students.faq.map((item) => (
+          <article class="surface-card p-8">
+            <h3 class="text-2xl font-semibold">{item.question}</h3>
+            <p class="mt-4">{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CTASection
+    eyebrow="Prospective Students"
+    title="Interested in joining the lab?"
+    description="Send a concise message describing your background, current interests, and the research themes you would like to explore. Strong inquiries usually reference methods, crops, or analytical approaches with clear intent."
+    actions={[
+      { label: 'Contact the PI', href: '/contact', variant: 'primary' },
+      { label: 'View Team', href: '/team', variant: 'secondary' },
+    ]}
+  />
+</BaseLayout>

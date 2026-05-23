@@ -1,0 +1,131 @@
+---
+import PublicationItem from './PublicationItem.astro';
+import publications from '../data/publications.json';
+
+const sortedPublications = [...publications].sort((left, right) => right.year - left.year);
+const featuredPublication =
+  sortedPublications.find((publication) => publication.tags?.includes('Featured')) ||
+  sortedPublications[0];
+const years = ['All', ...new Set(sortedPublications.map((publication) => String(publication.year)))];
+const topics = ['All', ...new Set(sortedPublications.flatMap((publication) => publication.tags || []))];
+---
+
+<section class="section-space" data-publications-archive>
+  <div class="page-shell">
+    <div class="max-w-3xl">
+      <p class="eyebrow mb-3">Publication List</p>
+      <h2 class="text-3xl font-semibold leading-tight sm:text-4xl">Sorted by year, filterable by theme</h2>
+      <p class="mt-4">The list below is JSON-driven and can be filtered by publication year or research topic.</p>
+    </div>
+
+    <div class="mt-8 grid gap-4 lg:grid-cols-2">
+      <div>
+        <p class="mb-3 font-mono text-xs uppercase tracking-[0.22em] text-muted">Year</p>
+        <div class="flex flex-wrap gap-2">
+          {years.map((year, index) => (
+            <button
+              type="button"
+              class:list={[
+                'rounded-full border px-4 py-2 text-sm font-semibold transition',
+                index === 0
+                  ? 'border-pine bg-soft text-charcoal'
+                  : 'border-line bg-white text-muted hover:border-pine hover:text-pine',
+              ]}
+              data-year-filter={year}
+              aria-pressed={index === 0 ? 'true' : 'false'}
+            >
+              {year}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div>
+        <p class="mb-3 font-mono text-xs uppercase tracking-[0.22em] text-muted">Topic</p>
+        <div class="flex flex-wrap gap-2">
+          {topics.map((topic, index) => (
+            <button
+              type="button"
+              class:list={[
+                'rounded-full border px-4 py-2 text-sm font-semibold transition',
+                index === 0
+                  ? 'border-pine bg-soft text-charcoal'
+                  : 'border-line bg-white text-muted hover:border-pine hover:text-pine',
+              ]}
+              data-topic-filter={topic}
+              aria-pressed={index === 0 ? 'true' : 'false'}
+            >
+              {topic}
+            </button>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <div class="surface-card mt-10 p-6 sm:p-8" data-publication-list>
+      <PublicationItem publication={featuredPublication} featured />
+      {sortedPublications
+        .filter((publication) => publication.title !== featuredPublication.title)
+        .map((publication) => <PublicationItem publication={publication} />)}
+    </div>
+  </div>
+</section>
+
+<script>
+  const root = document.querySelector('[data-publications-archive]');
+  const yearButtons = Array.from(root?.querySelectorAll('[data-year-filter]') || []);
+  const topicButtons = Array.from(root?.querySelectorAll('[data-topic-filter]') || []);
+  const publicationItems = Array.from(root?.querySelectorAll('.publication-item') || []);
+
+  if (root && yearButtons.length && topicButtons.length && publicationItems.length) {
+    let activeYear = 'All';
+    let activeTopic = 'All';
+
+    const setButtonState = (buttons, activeButton) => {
+      buttons.forEach((button) => {
+        const isActive = button === activeButton;
+        button.setAttribute('aria-pressed', String(isActive));
+        button.classList.toggle('border-pine', isActive);
+        button.classList.toggle('bg-soft', isActive);
+        button.classList.toggle('text-charcoal', isActive);
+        button.classList.toggle('border-line', !isActive);
+        button.classList.toggle('bg-white', !isActive);
+        button.classList.toggle('text-muted', !isActive);
+      });
+    };
+
+    const update = () => {
+      publicationItems.forEach((item, index) => {
+        const year = item.getAttribute('data-year') || '';
+        const tags = (item.getAttribute('data-tags') || '').split('|').filter(Boolean);
+        const matchesYear = activeYear === 'All' || year === activeYear;
+        const matchesTopic = activeTopic === 'All' || tags.includes(activeTopic);
+        const visible = matchesYear && matchesTopic;
+        item.classList.toggle('hidden', !visible);
+      });
+    };
+
+    root.addEventListener('click', (event) => {
+      const target = event.target instanceof HTMLElement ? event.target.closest('button') : null;
+      if (!target) {
+        return;
+      }
+
+      if (target.hasAttribute('data-year-filter')) {
+        const button = target;
+        activeYear = button.getAttribute('data-year-filter') || 'All';
+        setButtonState(yearButtons, button);
+        update();
+      }
+
+      if (target.hasAttribute('data-topic-filter')) {
+        const button = target;
+        activeTopic = button.getAttribute('data-topic-filter') || 'All';
+        setButtonState(topicButtons, button);
+        update();
+      }
+    });
+
+    update();
+  }
+</script>

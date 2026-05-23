@@ -1,0 +1,66 @@
+[
+  {
+    "year": 2025,
+    "title": "Quantitative trait stability across deficit irrigation environments in durum wheat",
+    "authors": "Marquez E, Okafor M, Patel R, Haddad S",
+    "journal": "Plant Physiology and Biochemistry",
+    "link": "https://doi.org/10.1016/j.plaphy.2025.108100",
+    "tags": ["Breeding", "Drought", "Featured"]
+  },
+  {
+    "year": 2025,
+    "title": "Randomization and blocking strategies for greenhouse plant physiology experiments",
+    "authors": "Marquez E, Chen L, Foster L",
+    "journal": "Applications in Plant Science",
+    "link": "https://doi.org/10.1002/aps3.11655",
+    "tags": ["Statistics", "Experimental Design"]
+  },
+  {
+    "year": 2024,
+    "title": "Chamber-to-field agreement in high-throughput maize phenotyping under moderate water limitation",
+    "authors": "Okafor M, Marquez E, Alvarez J",
+    "journal": "Frontiers in Plant Science",
+    "link": "https://doi.org/10.3389/fpls.2024.1470021",
+    "tags": ["Phenotyping", "Controlled Environment"]
+  },
+  {
+    "year": 2024,
+    "title": "Quality assurance considerations for metabolite quantification in leaf tissue using HPLC",
+    "authors": "Kim D, Haddad S, Marquez E",
+    "journal": "Journal of Agricultural and Food Chemistry",
+    "link": "https://doi.org/10.1021/jafc.4c01910",
+    "tags": ["HPLC", "Analytical Chemistry"]
+  },
+  {
+    "year": 2024,
+    "title": "Integrating physiology into early-generation selection decisions for climate-variable environments",
+    "authors": "Marquez E, Ibarra C, Mensah P",
+    "journal": "Crop Science",
+    "link": "https://doi.org/10.1002/csc2.21324",
+    "tags": ["Breeding", "Germplasm"]
+  },
+  {
+    "year": 2023,
+    "title": "Recovery from repeated heat episodes differs among barley accessions with contrasting canopy architecture",
+    "authors": "Haddad S, Marquez E, Dubois A",
+    "journal": "Journal of Experimental Botany",
+    "link": "https://doi.org/10.1093/jxb/erad251",
+    "tags": ["Heat Stress", "Physiology"]
+  },
+  {
+    "year": 2023,
+    "title": "Reporting standards for statistical analysis in controlled-environment plant experiments",
+    "authors": "Marquez E, Foster L, Singh T",
+    "journal": "Plant Methods",
+    "link": "https://doi.org/10.1186/s13007-023-01077-6",
+    "tags": ["Statistics", "Reproducibility"]
+  },
+  {
+    "year": 2022,
+    "title": "Pot experiment reproducibility: practical standards for substrate, irrigation, and metadata capture",
+    "authors": "Foster L, Marquez E, Kim D",
+    "journal": "Plant Direct",
+    "link": "https://doi.org/10.1002/pld3.442",
+    "tags": ["Reproducibility", "Controlled Environment"]
+  }
+]

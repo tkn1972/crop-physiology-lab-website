@@ -1,0 +1,49 @@
+{
+  "onboarding": {
+    "title": "Joining the Lab",
+    "body": "New students begin with a staged onboarding period covering greenhouse safety, sample labeling, notebook standards, and instrument booking practices. During the first month, each student completes a small calibration exercise and a reproducible analysis walkthrough."
+  },
+  "expectations": [
+    "Arrive at meetings with a written experimental update, not only verbal impressions.",
+    "Record deviations from protocol immediately and preserve the original data trail.",
+    "Plan sampling logistics before treatment initiation, especially for time-sensitive assays.",
+    "Treat shared facilities and communal datasets as collective scientific infrastructure."
+  ],
+  "dataManagement": [
+    "Every experiment receives a unique project code and dated folder structure before data collection begins.",
+    "Raw data are never overwritten. Cleaned data and derived tables must be versioned separately.",
+    "Metadata files should explain treatment factors, unit conventions, missing values, and instrument settings.",
+    "Figures intended for manuscripts should be reproducible from script or clearly documented spreadsheet steps."
+  ],
+  "reproducibility": [
+    "Use pre-registered analysis notes for complex experiments where practical.",
+    "Retain randomization files, tray maps, and chamber placement logs.",
+    "Store calibration records alongside data summaries for analytical workflows such as HPLC.",
+    "Report exclusions explicitly and distinguish exploratory analyses from confirmatory comparisons."
+  ],
+  "software": [
+    "R and RStudio for statistical analysis, ANOVA, and mixed-model workflows",
+    "Quarto for reproducible reports and internal method notes",
+    "Git and GitHub for version control of code, manuscripts, and templates",
+    "ImageJ and Python notebooks for phenotyping QC and batch processing",
+    "Zotero for reference management and reading group organization"
+  ],
+  "faq": [
+    {
+      "question": "What makes a strong prospective student inquiry?",
+      "answer": "A concise message that explains your interests, prior methods experience, and why the lab’s current themes are relevant to your training goals."
+    },
+    {
+      "question": "Do students need prior plant physiology experience?",
+      "answer": "Not always. We value quantitative curiosity, careful record keeping, and a willingness to learn methods in a disciplined way."
+    },
+    {
+      "question": "How are projects structured?",
+      "answer": "Most projects combine one methods-focused training phase, one main experiment with clear design logic, and a reproducible analysis and writing phase."
+    },
+    {
+      "question": "Can students work across greenhouse and field systems?",
+      "answer": "Yes. Several projects intentionally connect controlled-environment calibration with field validation when the research question requires it."
+    }
+  ]
+}

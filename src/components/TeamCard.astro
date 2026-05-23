@@ -1,0 +1,56 @@
+---
+import { isExternalHref, safeHref } from '../utils/safeHref';
+
+interface LinkItem {
+  label: string;
+  href: string;
+}
+
+interface Member {
+  name: string;
+  role: string;
+  image: string;
+  interests: string[];
+  bio: string;
+  email: string;
+  links?: LinkItem[];
+}
+
+const { member, featured = false } = Astro.props as { member: Member; featured?: boolean };
+---
+
+<article class:list={['surface-card overflow-hidden', featured && 'lg:grid lg:grid-cols-[0.85fr_1.15fr]']}>
+  <div class:list={['overflow-hidden', featured ? 'min-h-full' : 'h-52']}>
+    <img
+      src={member.image}
+      alt={`${member.name} profile placeholder`}
+      class:list={['h-full w-full object-cover', featured && 'min-h-[22rem]']}
+      loading="lazy"
+    />
+  </div>
+  <div class="p-6 sm:p-8">
+    <p class="eyebrow mb-3">{member.role}</p>
+    <h3 class="text-2xl font-semibold">{member.name}</h3>
+    <p class="mt-4">{member.bio}</p>
+    <div class="mt-5 flex flex-wrap gap-2">
+      {member.interests.map((interest) => (
+        <span class="rounded-full border border-line bg-white px-3 py-1 font-mono text-xs uppercase tracking-[0.16em] text-muted">
+          {interest}
+        </span>
+      ))}
+    </div>
+    <div class="mt-6 flex flex-wrap items-center gap-4 text-sm text-muted">
+      <a href={`mailto:${member.email}`} class="transition hover:text-pine">{member.email}</a>
+      {member.links?.map((link) => (
+        <a
+          href={safeHref(link.href)}
+          class="transition hover:text-pine"
+          target={isExternalHref(link.href) ? '_blank' : undefined}
+          rel={isExternalHref(link.href) ? 'noreferrer' : undefined}
+        >
+          {link.label}
+        </a>
+      ))}
+    </div>
+  </div>
+</article>

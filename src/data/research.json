@@ -1,0 +1,52 @@
+[
+  {
+    "id": "genetics-breeding",
+    "title": "Plant Genetics and Breeding",
+    "summary": "Linking physiological traits with germplasm diversity to support resilient crop improvement.",
+    "description": "We evaluate diverse breeding panels and pre-breeding material to determine how physiological traits contribute to adaptation under contrasting environmental conditions. Our work emphasizes trait stability, genotype-by-environment interaction, and phenotypic interpretation that can inform breeding decisions.",
+    "methods": ["Germplasm screening", "RCBD field trials", "Trait correlation analysis", "Mixed models"],
+    "tools": ["R", "ASReml", "FieldBook", "UAV-derived vegetation indices"],
+    "outputs": ["Trait prioritization frameworks", "Breeding population reports", "Cross-environment physiology datasets"],
+    "relatedPublications": ["2025 Quantitative trait stability in durum wheat", "2024 Integrating physiology into early-generation selection"]
+  },
+  {
+    "id": "stress-physiology",
+    "title": "Stress Physiology",
+    "summary": "Understanding water deficit, salinity, and heat responses through mechanistic measurements.",
+    "description": "Our stress physiology projects resolve how leaves, roots, and whole plants adjust carbon gain, osmotic balance, and water status during environmental stress. We design experiments around interpretable stress progression rather than short-term stress exposure alone.",
+    "methods": ["Gas exchange", "Leaf water potential", "Chlorophyll fluorescence", "Ion quantification"],
+    "tools": ["LI-COR systems", "Pressure chamber", "Fluorometer", "HPLC"],
+    "outputs": ["Stress response time series", "Metabolite profiles", "Trait integration models"],
+    "relatedPublications": ["2025 Salinity-driven shifts in tomato carbon allocation", "2023 Thermal stress recovery across barley accessions"]
+  },
+  {
+    "id": "controlled-environment",
+    "title": "Controlled Environment Phenotyping",
+    "summary": "Measuring growth, architecture, and stress progression in reproducible greenhouse and chamber systems.",
+    "description": "We use controlled-environment facilities to test hypotheses under tightly managed photoperiod, temperature, irrigation, and nutrition regimes. These experiments support calibration studies, method development, and validation of field observations.",
+    "methods": ["Image-based phenotyping", "Substrate moisture control", "Time-course sampling", "Environmental logging"],
+    "tools": ["Growth chambers", "Greenhouse conveyors", "RGB imaging", "Python QC scripts"],
+    "outputs": ["Standardized phenotyping protocols", "Growth response curves", "Calibration datasets"],
+    "relatedPublications": ["2024 Chamber-to-field agreement in maize phenotyping", "2022 Practical standards for pot experiment reproducibility"]
+  },
+  {
+    "id": "analytical-chemistry",
+    "title": "Analytical Chemistry and HPLC Workflows",
+    "summary": "Quantifying pigments, organic acids, and stress-associated metabolites with transparent laboratory workflows.",
+    "description": "Analytical chemistry in the lab is focused on robust extraction, calibration, and reporting practices. We routinely maintain SOPs for sample handling, chromatographic separation, blank correction, and reference standards so that metabolite measurements remain comparable across student cohorts and projects.",
+    "methods": ["HPLC", "Extraction standardization", "Calibration curves", "Quality-control checks"],
+    "tools": ["Agilent HPLC", "UV-Vis spectrophotometry", "Laboratory information sheets", "Reference standards"],
+    "outputs": ["Validated SOPs", "Metabolite quantification tables", "QC tracking templates"],
+    "relatedPublications": ["2024 Practical QA for plant metabolite quantification", "2021 Pigment extraction sensitivity across tissue types"]
+  },
+  {
+    "id": "experimental-design",
+    "title": "Experimental Design and Statistical Analysis",
+    "summary": "Building experiments around sound randomization, blocking, and reproducible analysis pipelines.",
+    "description": "A substantial portion of our group effort is devoted to experimental planning before data collection begins. We help collaborators define treatment structure, blocking strategy, sample size logic, and analysis plans that align with the biological question and realistic sources of variation.",
+    "methods": ["ANOVA", "Linear mixed models", "Power planning", "Randomization schemes"],
+    "tools": ["RMarkdown", "Quarto", "Git", "Versioned analysis templates"],
+    "outputs": ["Analysis checklists", "Reusable scripts", "Reproducible reporting workflows"],
+    "relatedPublications": ["2025 Randomization principles for greenhouse studies", "2023 Reporting standards for physiological experiments"]
+  }
+]

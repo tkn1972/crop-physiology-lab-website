@@ -1,0 +1,92 @@
+[
+  {
+    "id": "hplc-sop",
+    "title": "HPLC Pigment Quantification SOP",
+    "category": "Analytical Methods",
+    "description": "Stepwise protocol for chlorophyll and carotenoid extraction, calibration, and chromatogram review.",
+    "format": "PDF",
+    "status": "Updated",
+    "actionLabel": "View SOP"
+  },
+  {
+    "id": "anova-template",
+    "title": "ANOVA and Mixed Model Reporting Template",
+    "category": "Statistical Guides",
+    "description": "A structured template for documenting fixed effects, random terms, assumptions, and post hoc comparisons.",
+    "format": "DOCX",
+    "status": "Public",
+    "actionLabel": "Open Template"
+  },
+  {
+    "id": "rcbd-guide",
+    "title": "RCBD Planning Guide for Greenhouse Trials",
+    "category": "Experimental Design",
+    "description": "Design notes covering blocking logic, randomization schedules, and tray-position management.",
+    "format": "PDF",
+    "status": "Public",
+    "actionLabel": "Read Guide"
+  },
+  {
+    "id": "field-sampling",
+    "title": "Field Tissue Sampling Checklist",
+    "category": "Field Methods",
+    "description": "A transport and labeling checklist for metabolite-sensitive samples collected outside the lab.",
+    "format": "PDF",
+    "status": "Updated",
+    "actionLabel": "Open Checklist"
+  },
+  {
+    "id": "sensor-calibration",
+    "title": "Sensor Calibration Log Sheet",
+    "category": "SOPs",
+    "description": "Version-controlled worksheet for temperature, humidity, and substrate moisture sensor verification.",
+    "format": "XLSX",
+    "status": "Internal",
+    "actionLabel": "Preview Log"
+  },
+  {
+    "id": "joining-pack",
+    "title": "New Student Onboarding Packet",
+    "category": "Student Resources",
+    "description": "Initial guidance on safety, expectations, data management, and authorship norms for incoming students.",
+    "format": "PDF",
+    "status": "Public",
+    "actionLabel": "Open Packet"
+  },
+  {
+    "id": "metadata-schema",
+    "title": "Experiment Metadata Schema",
+    "category": "Experimental Design",
+    "description": "Minimum metadata fields for controlled-environment and field experiments, including environmental covariates.",
+    "format": "JSON",
+    "status": "Draft",
+    "actionLabel": "Review Schema"
+  },
+  {
+    "id": "sample-naming",
+    "title": "Sample Naming and Versioning Guide",
+    "category": "Student Resources",
+    "description": "Recommended file and sample naming conventions for tissue archives, analysis outputs, and manuscript figures.",
+    "format": "PDF",
+    "status": "Public",
+    "actionLabel": "Read Guide"
+  },
+  {
+    "id": "gas-exchange",
+    "title": "Gas Exchange Measurement Notes",
+    "category": "Analytical Methods",
+    "description": "Practical notes on acclimation times, leaf selection, and logging conventions for portable photosynthesis systems.",
+    "format": "PDF",
+    "status": "Updated",
+    "actionLabel": "View Notes"
+  },
+  {
+    "id": "data-audit",
+    "title": "Quarterly Data Audit Checklist",
+    "category": "SOPs",
+    "description": "Internal checklist for confirming file structure, backup status, analysis provenance, and figure traceability.",
+    "format": "DOCX",
+    "status": "Internal",
+    "actionLabel": "Open Checklist"
+  }
+]
