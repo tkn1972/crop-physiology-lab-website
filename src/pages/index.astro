@@ -37,7 +37,7 @@ const featuredPublications = [...publications].sort((a, b) => b.year - a.year).s
     </div>
   </PageHero>
 
-  <section class="section-space">
+  <section class="section-space bg-cream">
     <div class="page-shell grid gap-10 lg:grid-cols-[0.95fr_1.05fr]">
       <div>
         <div class="max-w-3xl">
@@ -46,7 +46,7 @@ const featuredPublications = [...publications].sort((a, b) => b.year - a.year).s
           <p class="mt-4">{site.mission}</p>
         </div>
       </div>
-      <div class="surface-card p-8">
+      <div class="bg-surface p-8">
         <p class="eyebrow mb-3">Principal Investigator</p>
         <h3 class="text-2xl font-semibold">{site.contact.piName}</h3>
         <p class="mt-4">{site.piBio}</p>
@@ -69,7 +69,7 @@ const featuredPublications = [...publications].sort((a, b) => b.year - a.year).s
     </div>
   </section>
 
-  <section class="section-space border-y border-line/80 bg-[#fbfaf8]">
+  <section class="section-space border-y border-line/80 bg-moss-light">
     <div class="page-shell">
       <div class="max-w-3xl">
         <p class="eyebrow mb-3">Research Focus</p>
@@ -80,7 +80,7 @@ const featuredPublications = [...publications].sort((a, b) => b.year - a.year).s
       </div>
       <div class="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
         {research.slice(0, 4).map((area) => (
-          <article class="surface-card flex flex-col p-6">
+          <article class="flex flex-col p-6">
             <p class="eyebrow mb-3">Theme</p>
             <h3 class="text-2xl font-semibold">{area.title}</h3>
             <p class="mt-4 flex-1">{area.summary}</p>
@@ -111,7 +111,7 @@ const featuredPublications = [...publications].sort((a, b) => b.year - a.year).s
         </a>
       </div>
 
-      <div class="surface-card p-8">
+      <div class="bg-surface p-8">
         <div class="max-w-3xl">
           <p class="eyebrow mb-3">Resources Preview</p>
           <h2 class="text-3xl font-semibold leading-tight sm:text-4xl">Protocols, templates, and guides</h2>
