@@ -28,7 +28,7 @@ const topics = ['All', ...new Set(sortedPublications.flatMap((publication) => pu
               class:list={[
                 'rounded-full border px-4 py-2 text-sm font-semibold transition',
                 index === 0
-                  ? 'border-pine bg-soft text-charcoal'
+                  ? 'border-pine bg-soft text-forest'
                   : 'border-line bg-white text-muted hover:border-pine hover:text-pine',
               ]}
               data-year-filter={year}
@@ -49,7 +49,7 @@ const topics = ['All', ...new Set(sortedPublications.flatMap((publication) => pu
               class:list={[
                 'rounded-full border px-4 py-2 text-sm font-semibold transition',
                 index === 0
-                  ? 'border-pine bg-soft text-charcoal'
+                  ? 'border-pine bg-soft text-forest'
                   : 'border-line bg-white text-muted hover:border-pine hover:text-pine',
               ]}
               data-topic-filter={topic}
@@ -62,7 +62,7 @@ const topics = ['All', ...new Set(sortedPublications.flatMap((publication) => pu
       </div>
     </div>
 
-    <div class="surface-card mt-10 p-6 sm:p-8" data-publication-list>
+    <div class="mt-10 p-6 sm:p-8" data-publication-list>
       <PublicationItem publication={featuredPublication} featured />
       {sortedPublications
         .filter((publication) => publication.title !== featuredPublication.title)
@@ -87,7 +87,7 @@ const topics = ['All', ...new Set(sortedPublications.flatMap((publication) => pu
         button.setAttribute('aria-pressed', String(isActive));
         button.classList.toggle('border-pine', isActive);
         button.classList.toggle('bg-soft', isActive);
-        button.classList.toggle('text-charcoal', isActive);
+        button.classList.toggle('text-forest', isActive);
         button.classList.toggle('border-line', !isActive);
         button.classList.toggle('bg-white', !isActive);
         button.classList.toggle('text-muted', !isActive);

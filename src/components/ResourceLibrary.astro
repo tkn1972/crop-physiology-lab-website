@@ -21,7 +21,7 @@ const categories = ['All', ...new Set(resources.map((resource) => resource.categ
         <input
           type="search"
           placeholder="Search resources by title, category, format, or status"
-          class="w-full rounded-full border border-line bg-white px-5 py-3 text-base text-charcoal placeholder:text-muted"
+          class="w-full rounded-full border border-line bg-white px-5 py-3 text-base text-forest placeholder:text-muted"
           data-resource-search
         />
       </label>
@@ -35,7 +35,7 @@ const categories = ['All', ...new Set(resources.map((resource) => resource.categ
               class:list={[
                 'rounded-full border px-4 py-2 text-sm font-semibold transition',
                 index === 0
-                  ? 'border-pine bg-soft text-charcoal'
+                  ? 'border-pine bg-soft text-forest'
                   : 'border-line bg-white text-muted hover:border-pine hover:text-pine',
               ]}
               data-resource-filter={category}
@@ -52,7 +52,7 @@ const categories = ['All', ...new Set(resources.map((resource) => resource.categ
       {resources.map((resource) => <ResourceCard resource={resource} />)}
     </div>
 
-    <div class="surface-card mt-10 hidden p-10 text-center" data-resource-empty>
+    <div class="mt-10 hidden p-10 text-center" data-resource-empty>
       <h3 class="text-2xl font-semibold">No resources match the current filters</h3>
       <p class="mt-4">Try a broader search term or switch back to the <strong>All</strong> category.</p>
     </div>
@@ -103,7 +103,7 @@ const categories = ['All', ...new Set(resources.map((resource) => resource.categ
           candidate.setAttribute('aria-pressed', String(isActive));
           candidate.classList.toggle('border-pine', isActive);
           candidate.classList.toggle('bg-soft', isActive);
-          candidate.classList.toggle('text-charcoal', isActive);
+          candidate.classList.toggle('text-forest', isActive);
           candidate.classList.toggle('border-line', !isActive);
           candidate.classList.toggle('bg-white', !isActive);
           candidate.classList.toggle('text-muted', !isActive);

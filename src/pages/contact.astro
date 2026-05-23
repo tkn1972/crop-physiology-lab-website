@@ -18,7 +18,7 @@ import { safeHref } from '../utils/safeHref';
       <p class="font-mono text-xs uppercase tracking-[0.22em] text-muted">Response Time</p>
       <p>{site.responseTime}</p>
       <p class="font-mono text-xs uppercase tracking-[0.22em] text-muted">Primary Email</p>
-      <a href={`mailto:${site.email}`} class="text-lg font-semibold text-pine transition hover:text-charcoal">
+      <a href={`mailto:${site.email}`} class="text-lg font-semibold text-pine transition hover:text-forest">
         {site.email}
       </a>
     </div>
@@ -35,20 +35,20 @@ import { safeHref } from '../utils/safeHref';
           </p>
         </div>
 
-        <div class="surface-card p-8">
+        <div class="bg-surface p-8">
           <h3 class="text-2xl font-semibold">{site.contact.piName}</h3>
           <p class="mt-2 text-charcoal">{site.contact.piTitle}</p>
           <div class="mt-6 space-y-3 text-muted">
             <p>{site.institution}</p>
             <p>{site.contact.office}</p>
             <p>{site.location}</p>
-            <a href={`mailto:${site.email}`} class="inline-flex text-pine transition hover:text-charcoal">
+            <a href={`mailto:${site.email}`} class="inline-flex text-pine transition hover:text-forest">
               {site.email}
             </a>
           </div>
         </div>
 
-        <div class="surface-card p-8">
+        <div class="bg-surface p-8">
           <h3 class="text-xl font-semibold">Related programs</h3>
           <ul class="mt-5 space-y-3">
             {site.contact.departmentLinks.map((item) => (
@@ -62,7 +62,7 @@ import { safeHref } from '../utils/safeHref';
         </div>
       </div>
 
-      <div class="surface-card p-8 sm:p-10">
+      <div class="bg-surface p-8 sm:p-10">
         <h2 class="text-3xl font-semibold">Inquiry Form</h2>
         <p class="mt-4">
           This interface is frontend-only, but it reflects the complete structure we use for collaboration and student inquiries.
@@ -70,16 +70,16 @@ import { safeHref } from '../utils/safeHref';
         <form class="mt-8 space-y-5">
           <div class="grid gap-5 sm:grid-cols-2">
             <label class="block">
-              <span class="mb-2 block text-sm font-semibold text-charcoal">Name</span>
+              <span class="mb-2 block text-sm font-semibold text-forest">Name</span>
               <input type="text" class="w-full rounded-2xl border border-line bg-white px-4 py-3" />
             </label>
             <label class="block">
-              <span class="mb-2 block text-sm font-semibold text-charcoal">Email</span>
+              <span class="mb-2 block text-sm font-semibold text-forest">Email</span>
               <input type="email" class="w-full rounded-2xl border border-line bg-white px-4 py-3" />
             </label>
           </div>
           <label class="block">
-            <span class="mb-2 block text-sm font-semibold text-charcoal">Inquiry Type</span>
+            <span class="mb-2 block text-sm font-semibold text-forest">Inquiry Type</span>
             <select class="w-full rounded-2xl border border-line bg-white px-4 py-3">
               <option>Prospective graduate student</option>
               <option>Research collaboration</option>
@@ -88,11 +88,11 @@ import { safeHref } from '../utils/safeHref';
             </select>
           </label>
           <label class="block">
-            <span class="mb-2 block text-sm font-semibold text-charcoal">Subject</span>
+            <span class="mb-2 block text-sm font-semibold text-forest">Subject</span>
             <input type="text" class="w-full rounded-2xl border border-line bg-white px-4 py-3" />
           </label>
           <label class="block">
-            <span class="mb-2 block text-sm font-semibold text-charcoal">Message</span>
+            <span class="mb-2 block text-sm font-semibold text-forest">Message</span>
             <textarea rows="7" class="w-full rounded-2xl border border-line bg-white px-4 py-3"></textarea>
           </label>
           <button type="submit" class="button-primary">Send Inquiry</button>
