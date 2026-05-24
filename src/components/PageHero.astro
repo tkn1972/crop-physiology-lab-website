@@ -8,12 +8,12 @@ interface Props {
 const { eyebrow, title, description } = Astro.props;
 ---
 
-<section class="section-space border-b border-line/80">
-  <div class="page-shell grid gap-10 lg:grid-cols-[1fr_0.78fr] lg:items-end">
+<section class="py-10 sm:py-12 border-b border-line/80">
+  <div class="page-shell grid gap-8 lg:grid-cols-[1fr_0.78fr] lg:items-start">
     <div class="max-w-3xl">
-      {eyebrow ? <p class="eyebrow mb-4">{eyebrow}</p> : null}
+      {eyebrow ? <p class="eyebrow mb-2">{eyebrow}</p> : null}
       <h1 class="text-4xl font-semibold leading-tight sm:text-5xl">{title}</h1>
-      <p class="mt-5 max-w-2xl text-lg">{description}</p>
+      <p class="mt-4 max-w-2xl text-lg">{description}</p>
     </div>
     <div class="bg-white p-6 sm:p-8">
       <slot />
