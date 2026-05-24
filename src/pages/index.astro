@@ -29,11 +29,14 @@ const featuredPublications = [...publications].sort((a, b) => b.year - a.year).s
           </a>
         ))}
       </div>
-      <img
-        src="/images/hero/glasshouse.svg"
-        alt="Illustrated greenhouse and plant phenotyping environment"
-        class="mt-8 w-full rounded-[1.25rem] border border-line"
-      />
+      <div class="mt-8 relative overflow-hidden rounded-2xl">
+        <img
+          src="/images/hero/leaf-hero.jpg"
+          alt="Lush green plant leaves close-up, representing crop physiology research"
+          class="w-full h-[32rem] object-cover"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-forest/60 via-transparent to-transparent"></div>
+      </div>
     </div>
   </PageHero>
 
@@ -119,7 +122,7 @@ const featuredPublications = [...publications].sort((a, b) => b.year - a.year).s
         </div>
         <div class="mt-8 space-y-4">
           {resources.slice(0, 4).map((resource) => (
-            <div class="rounded-2xl border border-line bg-white p-4">
+            <div class="rounded-2xl bg-white p-4">
               <div class="flex items-center justify-between gap-3">
                 <h3 class="text-lg font-semibold">{resource.title}</h3>
                 <span class="font-mono text-xs uppercase tracking-[0.2em] text-muted">{resource.format}</span>
